@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7th CPC Calculator 2025 | Government Salary Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            padding: 20px;
+        }
+
+        .calculator-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #1a73e8;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5f6368;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dadce0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+        }
+
+        .calculate-btn {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            background: #1557b0;
+        }
+
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .result-item span:first-child {
+            color: #5f6368;
+        }
+
+        .result-item span:last-child {
+            color: #1a73e8;
+            font-weight: 600;
+        }
+
+        .instructions {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .instructions h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+            color: #5f6368;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>7th Pay Commission Calculator 2025</h1>
+        
+        <div class="input-group">
+            <label for="basic-pay">Current Basic Pay (₹)</label>
+            <input type="number" id="basic-pay" placeholder="Enter your current basic pay">
+        </div>
+
+        <div class="input-group">
+            <label for="grade-pay">Grade Pay (₹)</label>
+            <input type="number" id="grade-pay" placeholder="Enter your grade pay">
+        </div>
+
+        <div class="input-group">
+            <label for="allowances">Total Allowances (₹)</label>
+            <input type="number" id="allowances" placeholder="Enter total allowances">
+        </div>
+
+        <button class="calculate-btn" onclick="calculateSalary()">Calculate Salary</button>
+
+        <div class="results" id="results">
+            <div class="result-item">
+                <span>New Basic Pay</span>
+                <span id="new-basic">₹0</span>
+            </div>
+            <div class="result-item">
+                <span>DA Percentage</span>
+                <span id="da-percent">0%</span>
+            </div>
+            <div class="result-item">
+                <span>Total Salary</span>
+                <span id="total-salary">₹0</span>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>How to Use the Calculator</h2>
+            <ol>
+                <li>Enter your current Basic Pay (as per 7th CPC)</li>
+                <li>Enter your Grade Pay (if applicable)</li>
+                <li>Enter your total allowances (HRA, TA, etc.)</li>
+                <li>Click 'Calculate Salary' to see your updated salary</li>
+                <li>Results will show your new pay structure with latest DA rates</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function calculateSalary() {
+            // Get input values
+            const basicPay = parseFloat(document.getElementById('basic-pay').value) || 0;
+            const gradePay = parseFloat(document.getElementById('grade-pay').value) || 0;
+            const allowances = parseFloat(document.getElementById('allowances').value) || 0;
+
+            // Current DA Percentage (Update this according to latest notifications)
+            const daPercentage = 50; // Example value - change as per official updates
+
+            // Calculations
+            const newBasic = basicPay + gradePay;
+            const daAmount = newBasic * (daPercentage / 100);
+            const totalSalary = newBasic + daAmount + allowances;
+
+            // Display results
+            document.getElementById('results').style.display = 'block';
+            document.getElementById('new-basic').textContent = `₹${newBasic.toLocaleString()}`;
+            document.getElementById('da-percent').textContent = `${daPercentage}%`;
+            document.getElementById('total-salary').textContent = `₹${totalSalary.toLocaleString()}`;
+        }
+    </script>
+</body>
+</html>
