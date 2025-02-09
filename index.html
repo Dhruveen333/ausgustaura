@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7th CPC Calculator 2025 | Government Salary Calculator</title>
+    <title>LIC Jeevan Labh Calculator 2025</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background: #f0f2f5;
+            background: linear-gradient(135deg, #f0f5ff, #e6f0ff);
+            min-height: 100vh;
             padding: 20px;
         }
 
         .calculator-container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 40px auto;
-            background: #ffffff;
+            background: white;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,76,151,0.1);
+            border: 1px solid #e0e0e0;
         }
 
         h1 {
-            color: #1a73e8;
+            color: #004c97;
             text-align: center;
             margin-bottom: 30px;
             font-size: 28px;
@@ -40,14 +42,14 @@
         label {
             display: block;
             margin-bottom: 8px;
-            color: #5f6368;
+            color: #333;
             font-weight: 500;
         }
 
         input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #dadce0;
+            border: 2px solid #e0e0e0;
             border-radius: 8px;
             font-size: 16px;
             transition: border-color 0.3s ease;
@@ -55,141 +57,151 @@
 
         input:focus {
             outline: none;
-            border-color: #1a73e8;
-            box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+            border-color: #004c97;
         }
 
-        .calculate-btn {
-            background: #1a73e8;
+        button {
+            background: #004c97;
             color: white;
             border: none;
-            padding: 14px 28px;
+            padding: 15px 30px;
             border-radius: 8px;
-            font-size: 16px;
             cursor: pointer;
+            font-size: 16px;
             width: 100%;
             transition: background 0.3s ease;
         }
 
-        .calculate-btn:hover {
-            background: #1557b0;
+        button:hover {
+            background: #003366;
         }
 
-        .results {
+        .result {
             margin-top: 30px;
             padding: 20px;
-            background: #f8f9fa;
+            background: #f8f9ff;
             border-radius: 8px;
+            text-align: center;
             display: none;
         }
 
-        .result-item {
-            display: flex;
-            justify-content: space-between;
+        .result h3 {
+            color: #004c97;
             margin-bottom: 15px;
-            padding: 12px;
-            background: white;
-            border-radius: 6px;
-        }
-
-        .result-item span:first-child {
-            color: #5f6368;
-        }
-
-        .result-item span:last-child {
-            color: #1a73e8;
-            font-weight: 600;
         }
 
         .instructions {
-            margin-top: 30px;
+            background: #fff8e6;
             padding: 20px;
-            background: #f8f9fa;
             border-radius: 8px;
+            margin-bottom: 30px;
         }
 
         .instructions h2 {
-            color: #1a73e8;
-            margin-bottom: 15px;
+            color: #004c97;
             font-size: 20px;
+            margin-bottom: 15px;
         }
 
         .instructions ol {
             padding-left: 20px;
-            color: #5f6368;
-            line-height: 1.6;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        @media (max-width: 480px) {
+            .calculator-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="calculator-container">
-        <h1>7th Pay Commission Calculator 2025</h1>
+        <h1>LIC Jeevan Labh Calculator 2025</h1>
         
-        <div class="input-group">
-            <label for="basic-pay">Current Basic Pay (₹)</label>
-            <input type="number" id="basic-pay" placeholder="Enter your current basic pay">
-        </div>
-
-        <div class="input-group">
-            <label for="grade-pay">Grade Pay (₹)</label>
-            <input type="number" id="grade-pay" placeholder="Enter your grade pay">
-        </div>
-
-        <div class="input-group">
-            <label for="allowances">Total Allowances (₹)</label>
-            <input type="number" id="allowances" placeholder="Enter total allowances">
-        </div>
-
-        <button class="calculate-btn" onclick="calculateSalary()">Calculate Salary</button>
-
-        <div class="results" id="results">
-            <div class="result-item">
-                <span>New Basic Pay</span>
-                <span id="new-basic">₹0</span>
-            </div>
-            <div class="result-item">
-                <span>DA Percentage</span>
-                <span id="da-percent">0%</span>
-            </div>
-            <div class="result-item">
-                <span>Total Salary</span>
-                <span id="total-salary">₹0</span>
-            </div>
-        </div>
-
         <div class="instructions">
-            <h2>How to Use the Calculator</h2>
+            <h2>How to Use:</h2>
             <ol>
-                <li>Enter your current Basic Pay (as per 7th CPC)</li>
-                <li>Enter your Grade Pay (if applicable)</li>
-                <li>Enter your total allowances (HRA, TA, etc.)</li>
-                <li>Click 'Calculate Salary' to see your updated salary</li>
-                <li>Results will show your new pay structure with latest DA rates</li>
+                <li>Enter the desired Sum Assured amount</li>
+                <li>Input your current age</li>
+                <li>Select the policy term (16 to 25 years)</li>
+                <li>Click "Calculate Premium"</li>
+                <li>View your estimated premium in the result section</li>
             </ol>
+        </div>
+
+        <div class="input-group">
+            <label for="sumAssured">Sum Assured (₹)</label>
+            <input type="number" id="sumAssured" placeholder="Enter amount (e.g., 1000000)">
+        </div>
+
+        <div class="input-group">
+            <label for="age">Your Age (Years)</label>
+            <input type="number" id="age" placeholder="Enter your current age">
+        </div>
+
+        <div class="input-group">
+            <label for="term">Policy Term (Years)</label>
+            <input type="number" id="term" min="16" max="25" placeholder="Select between 16-25 years">
+        </div>
+
+        <button onclick="calculatePremium()">Calculate Premium</button>
+
+        <div class="result" id="result">
+            <h3>Estimated Premium</h3>
+            <p id="premiumAmount">₹0</p>
         </div>
     </div>
 
     <script>
-        function calculateSalary() {
+        function calculatePremium() {
             // Get input values
-            const basicPay = parseFloat(document.getElementById('basic-pay').value) || 0;
-            const gradePay = parseFloat(document.getElementById('grade-pay').value) || 0;
-            const allowances = parseFloat(document.getElementById('allowances').value) || 0;
+            const sumAssured = parseFloat(document.getElementById('sumAssured').value);
+            const age = parseInt(document.getElementById('age').value);
+            const term = parseInt(document.getElementById('term').value);
 
-            // Current DA Percentage (Update this according to latest notifications)
-            const daPercentage = 50; // Example value - change as per official updates
+            // Basic validation
+            if (!sumAssured || !age || !term) {
+                alert('Please fill all fields');
+                return;
+            }
 
-            // Calculations
-            const newBasic = basicPay + gradePay;
-            const daAmount = newBasic * (daPercentage / 100);
-            const totalSalary = newBasic + daAmount + allowances;
+            if (term < 16 || term > 25) {
+                alert('Policy term must be between 16-25 years');
+                return;
+            }
 
-            // Display results
-            document.getElementById('results').style.display = 'block';
-            document.getElementById('new-basic').textContent = `₹${newBasic.toLocaleString()}`;
-            document.getElementById('da-percent').textContent = `${daPercentage}%`;
-            document.getElementById('total-salary').textContent = `₹${totalSalary.toLocaleString()}`;
+            // Simplified calculation formula (Replace with actual LIC formula)
+            // Note: This is a placeholder calculation. Actual premium calculation
+            // should use LIC's official premium rates and factors.
+            const premium = (sumAssured / 1000) * (20 + (age * 0.5) + (term * 0.3));
+
+            // Display result
+            const resultDiv = document.getElementById('result');
+            const premiumAmount = document.getElementById('premiumAmount');
+            
+            premiumAmount.textContent = `₹${premium.toLocaleString('en-IN')}/year`;
+            resultDiv.style.display = 'block';
         }
+
+        // Input validation
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', (e) => {
+                if (e.target.id === 'term') {
+                    if (e.target.value < 16) e.target.value = 16;
+                    if (e.target.value > 25) e.target.value = 25;
+                }
+            });
+        });
     </script>
 </body>
 </html>
